@@ -33,7 +33,18 @@ class UserController {
 
         }
     };
+    forgotPassword=(req,res,next)=>{
+        try {
+      
+            res.send("User Password Forgot Successfully").status(200);
 
+        } catch (err) {
+            res.status(404).send("User Password Forgot Failed.")
+            console.log("User Controller:- ",err);
+
+        }
+    };
+    
 
 }
 module.exports = new UserController()
