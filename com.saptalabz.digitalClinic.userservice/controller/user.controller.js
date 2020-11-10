@@ -21,6 +21,19 @@ class UserController {
             console.log("User Controller:- ",err);
 
         }
-    }
+    };
+    getUserDetails=(req,res,next)=>{
+        try {
+      
+            res.send("Get User Details Successfully").status(200);
+
+        } catch (err) {
+            res.status(404).send("User Details Failed.")
+            console.log("User Controller:- ",err);
+
+        }
+    };
+
+
 }
 module.exports = new UserController()
