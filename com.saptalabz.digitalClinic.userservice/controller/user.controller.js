@@ -44,6 +44,28 @@ class UserController {
 
         }
     };
+    resetPassword=(req,res,next)=>{
+        try {
+      
+            res.send("User Reset Forgot Successfully").status(200);
+
+        } catch (err) {
+            res.status(404).send("User Reset Forgot Failed.")
+            console.log("User Controller:- ",err);
+
+        }
+    };
+    getAllUserDetails=(req,res,next)=>{
+        try {
+      
+            res.send("Get All User Details Successfully").status(200);
+
+        } catch (err) {
+            res.status(404).send("Get All User Details Failed.")
+            console.log("User Controller:- ",err);
+
+        }
+    }
     
 
 }
