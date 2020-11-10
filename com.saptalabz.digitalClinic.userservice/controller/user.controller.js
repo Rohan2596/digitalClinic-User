@@ -7,7 +7,18 @@ class UserController {
 
         } catch (err) {
             res.status(404).send("User Addition Failed.")
-            console.log("Add User Controller:- ",err);
+            console.log("User Controller:- ",err);
+
+        }
+    };
+    authenticateUser=(req,res,next)=>{
+        try {
+      
+            res.send("User Authenicate Successfully").status(200);
+
+        } catch (err) {
+            res.status(404).send("User Authenication Failed.")
+            console.log("User Controller:- ",err);
 
         }
     }
