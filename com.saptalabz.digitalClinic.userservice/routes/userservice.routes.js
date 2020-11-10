@@ -1,6 +1,7 @@
 const express=require('express');
 const router =express.Router();
-router.post('/add')
+const userController=require('../controller/user.controller')
+router.post('/add',userController.addUser)
 router.post('/auth')
 router.get('/forgot')
 router.post('/reset')
