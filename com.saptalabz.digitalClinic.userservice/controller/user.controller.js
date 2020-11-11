@@ -14,7 +14,7 @@ class UserController {
     };
     authenticateUser=(req,res,next)=>{
         try {
-      
+            userService.authenticateUserService();
             res.send("User Authenicate Successfully").status(200);
 
         } catch (err) {
