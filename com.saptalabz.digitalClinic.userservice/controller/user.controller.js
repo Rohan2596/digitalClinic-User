@@ -1,8 +1,9 @@
+const userService = require("../service/user.service");
 class UserController {
 
     addUser = (req, res, next) => {
         try {
-      
+            userService.addUserService();
             res.send("User Added Successfully").status(200);
 
         } catch (err) {
